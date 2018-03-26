@@ -53,9 +53,9 @@ angegeben, z.B. `/home/build/meta-openembedded/meta-oe` oder
 	branch: master
 	revision: HEAD
 
-### Rust Programiersprach `meta-rust`
+### Rust Programiersprach `meta-rust-bin`
 
-	URI: https://github.com/meta-rust/meta-rust.git
-	layers: meta-rust
-	branch: master
+	URI: https://github.com/zzeroo/meta-rust-bin.git
+	layers: meta-rust-bin
+	branch: nightly
 	revision: HEAD
