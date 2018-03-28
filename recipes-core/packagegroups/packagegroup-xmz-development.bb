@@ -1,7 +1,11 @@
-SUMMARY = "Packagegroup for development images"
-HOMEPAGE = "https://github.com/zzeroo/meta-lemaker"
+SUMMARY = "Packagegroup des OS Images der 'xMZ-Plattform' [Development Version]"
+DESCRIPTION = "Diese Packagegroup enhält zusätzliche Packeted die bei der \
+Entwicklung der 'xMZ-Plattform' hilfreich sind. \
+Gleichzeitig wird die WLAN Funktionalität hergestellt. \
+"
+HOMEPAGE = "https://github.com/Kliemann-Service-GmbH/xMZ-Plattform"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
+LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.GPLv2;md5=751419260aa954499f7abaabaa882bbe"
 
 inherit packagegroup
 
@@ -21,5 +25,3 @@ RDEPENDS_${PN} = "\
     linux-firmware \
     broadcom-firmware \
 "
-
-
