@@ -1,0 +1,22 @@
+# xmz-test-gui.service
+#
+# systemd unit file for the gui of the 'xMZ-Plattform'.
+#
+# Startet die grafischen Benutzer Oberfläche (GUI) der
+# 'xMZ-Platform'.
+#
+[Unit]
+Description=Grafischen Benutzer Oberfläche der 'xMZ-Platform'"
+After=weston.service
+
+[Service]
+Type=simple
+Environment=XDG_RUNTIME_DIR=/run/user/0
+Environment=XMZ_HARDWARE=0.1.0
+Environment=LANG=de_DE.UTF-8
+ExecStart=/usr/bin/xmz-gui
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,22 @@
+# xmz-server-configuration.service
+#
+# Dieses Unit File prüft ob eine Konfigurationsdatei für den Serverteil der
+# 'xMZ'-Platform im Verzeichnis /boot/ existiert.
+#
+# Sollte keine Konfigurationsdatei vorhanden sein, dann kopiert das Unit
+# die Default Konfigurationsdatei nach /boot.
+#
+[Unit]
+Description="Prüft ob eine Konfigurationsdatei für den 'xmz-server' existiert"
+ConditionPathExists=!/boot/xmz.toml
+Conflicts=umount.target
+Requires=boot.mount
+After=boot.mount
+
+[Service]
+ExecStart=/bin/cp /usr/share/xmz-server/xmz.toml.example /boot/xmz.toml
+ExecStartPost=/bin/systemctl stop boot.mount
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
