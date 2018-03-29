@@ -1,4 +1,4 @@
-include recipes-core/images/core-image-base.bb
+require recipes-core/images/core-image-base.bb
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.GPLv2;md5=751419260aa954499f7abaabaa882bbe"
@@ -23,8 +23,4 @@ IMAGE_INSTALL += " \
 IMAGE_INSTALL += " \
 	locale-base-de-de \
 	coreutils-locale-de \
-"
-
-IMAGE_INSTALL += " \
-	xmz-server \
 "
