@@ -24,6 +24,17 @@ angegeben, z.B. `/home/build/meta-openembedded/meta-oe` oder
 	branch: master
 	revision: HEAD
 
+#### OpenEmbedded `meta-oe`
+
+	URI: git://git.openembedded.org/meta-openembedded
+	layers: meta-oe
+	branch: master
+	revision: HEAD
+
+    Wegen libmodbus-3.1.4, diese Rezepte werden für die "alten" Programme
+    (d.h. vor Version 2.0.0) wie `xmz-server`, `xmz-gui` und
+    `co-no2-kalibrator` benötigt.
+
 #### OpenEmbedded `meta-gnome`
 
 	URI: git://git.openembedded.org/meta-openembedded

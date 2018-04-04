@@ -1,4 +1,4 @@
-require image-development.bb
+require xmz-image_0.5.1.bb
 
 LICENSE = "GPLv2"
 

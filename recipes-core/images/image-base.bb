@@ -5,6 +5,12 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.GPLv2;md5=751419260aa954499f
 
 PR = "r0"
 
+# Auto resize root filesystem on first boot
+IMAGE_INSTALL += " \
+    e2fsprogs-resize2fs \
+    resize-rootfs \
+"
+
 # Include modules in rootfs
 IMAGE_INSTALL += " \
 	kernel-modules \

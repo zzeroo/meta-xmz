@@ -4,11 +4,6 @@ LICENSE = "GPLv2"
 
 PR = "r0"
 
-# Auto resize root filesystem on first boot
-IMAGE_INSTALL += " \
-    e2fsprogs-resize2fs \
-    resize-rootfs \
-"
 # IMAGE_INSTALL += "autoconf automake binutils binutils-symlinks cpp cpp-symlinks \
 #   gcc gcc-symlinks g++ g++-symlinks gettext make libstdc++ libstdc++-dev file coreutils \
 #   clang \
