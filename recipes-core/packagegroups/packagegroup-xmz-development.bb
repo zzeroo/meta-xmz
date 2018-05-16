@@ -12,16 +12,16 @@ inherit packagegroup
 COMPATIBLE_MACHINE = "^bananapro$"
 
 RDEPENDS_${PN} = "\
-    vim \
-    git \
-    git-perltools \
-    tmux \
-    zsh \
-    curl \
-    wireless-tools \
-    wpa-supplicant \
-    wlan-config \
-    ethtool \
-    linux-firmware \
-    broadcom-firmware \
+  vim \
+  git \
+  git-perltools \
+  tmux \
+  zsh \
+  curl \
+  wireless-tools \
+  wpa-supplicant \
+  wlan-config \
+  ethtool \
+  linux-firmware \
+  broadcom-firmware \
 "

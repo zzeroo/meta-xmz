@@ -1,8 +1,8 @@
-require xmz-image_0.5.1.bb
+require image-development.bb
 
 LICENSE = "GPLv2"
 
-PR = "r0"
+PR = "r1"
 
 COMPATIBLE_MACHINE = "bananapro"
 
