@@ -4,13 +4,20 @@
 #
 [Unit]
 Description="Server der xMZ-Platform"
+Conflicts=resize-rootfs.service
+After=resize-rootfs.service
 After=weston.service
+After=boot.mount
 
 [Service]
 Type=simple
 Environment=XDG_RUNTIME_DIR=/run/user/0
 Environment=XMZ_HARDWARE=0.1.0
 Environment=LANG=de_DE.UTF-8
+Environment="ROCKET_ENV=prod"
+Environment="ROCKET_ADDRESS=127.0.0.1"
+Environment="ROCKET_PORT=1337"
+Environment="ROCKET_LOG=critical"
 ExecStart=/usr/bin/xmz-server
 Restart=always
 RestartSec=10s

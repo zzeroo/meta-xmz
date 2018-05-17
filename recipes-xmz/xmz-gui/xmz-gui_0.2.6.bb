@@ -11,7 +11,7 @@ SRC_URI = " \
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
 
-PR = "r0"
+PR = "r2"
 
 DEPENDS += " \
   gtk+3 \
@@ -27,7 +27,6 @@ DEPENDS += " \
 # "
 RDEPENDS_${PN} = " \
   xmz-gui-init \
-  xmz-gui-configuration \
 "
 
 # # Examples sollen auch alle mit in das Image eingebunden werden.

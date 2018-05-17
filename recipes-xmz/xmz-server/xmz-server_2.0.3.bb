@@ -6,17 +6,14 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.GPLv2;md5=751419260aa954499f7abaabaa882bbe"
 
 SRC_URI = " \
-  git://github.com/Kliemann-Service-GmbH/xmz-server.git;branch=master;protocol=https \
+  git://github.com/Kliemann-Service-GmbH/xmz-server.git;branch=development;protocol=https \
 "
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
 
-PR = "r0"
+PR = "r1"
 
-# DEPENDS += " \
-# "
 
-# RDEPENDS_${PN} = " \
-#   xmz-server-init \
-#   xmz-server-configuration \
-# "
+RDEPENDS_${PN} = " \
+   xmz-server-init \
+"
