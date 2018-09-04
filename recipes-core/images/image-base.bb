@@ -1,3 +1,10 @@
+# Allgemeines Basis Image.
+#
+# Dieses Image bildet die Grundlage von z.B. `xmz-image` dem Standard Image
+# der 'xMZ-Plattform'.
+# Auf diesem Image baut dann wiederrum das Image `image-development` auf. Dieses
+# wird ausschließlich bei der Entwicklung, in House, eingesetzt.
+#
 require recipes-core/images/core-image-base.bb
 
 LICENSE = "GPLv2"

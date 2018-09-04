@@ -1,4 +1,4 @@
-# yocto/OpenEmbedded Rezepte für die 'xMZ-Platform'
+# yocto/OpenEmbedded Rezepte für die xMZ-Platform'
 
 Rezepte für das yocto/OpenEmbedded Buildsystem.
 
@@ -9,6 +9,13 @@ und der `xmz-co-no2-calibrator`.
 
 Dieser Layer hängt von folgenden Layern ab:
 
+### Board Support Package (BSP) für Lemaker Geräte `meta-bsp_lemaker`
+
+	URI: https://github.com/zzeroo/meta-bsp_lemaker
+	layers: meta-bsp_lemaker
+	branch: master
+	revision: ba693ccefbbbce99cff07894aa6672c9695ad448
+
 ### meta-openembedded
 
 Das OpenEmbedded Meta Repo `git://git.openembedded.org/meta-openembedded`
@@ -17,54 +24,45 @@ clonen. In der bitbake `bblayers.conf` werden dann die verschieden Unterverzeich
 angegeben, z.B. `/home/build/meta-openembedded/meta-oe` oder
 `/home/build/meta-openembedded/meta-gnome`
 
-#### OpenEmbedded Core `oe-core`
-
-	URI: git://git.openembedded.org/meta-openembedded
-	layers: meta-oe
-	branch: master
-	revision: HEAD
-
 #### OpenEmbedded `meta-oe`
 
 	URI: git://git.openembedded.org/meta-openembedded
 	layers: meta-oe
 	branch: master
-	revision: HEAD
-
-    Wegen libmodbus-3.1.4, diese Rezepte werden für die "alten" Programme
-    (d.h. vor Version 2.0.0) wie `xmz-server`, `xmz-gui` und
-    `co-no2-kalibrator` benötigt.
-
-#### OpenEmbedded `meta-gnome`
-
-	URI: git://git.openembedded.org/meta-openembedded
-	layers: meta-gnome
-	branch: master
-	revision: HEAD
-
-#### OpenEmbedded `meta-networking`
-
-	URI: git://git.openembedded.org/meta-openembedded
-	layers: meta-networking
-	branch: master
-	revision: HEAD
+	revision: a19aa29f7fa336cd075b72c496fe1102e6e5422b
 
 #### OpenEmbedded `meta-python`
 
 	URI: git://git.openembedded.org/meta-openembedded
 	layers: meta-python
 	branch: master
-	revision: HEAD
+	revision: a19aa29f7fa336cd075b72c496fe1102e6e5422b
 
 
-### Board Support Package (BSP) für Lemaker Geräte `meta-bsp_lemaker`
+#### OpenEmbedded `meta-networking`
 
-	URI: https://github.com/zzeroo/meta-bsp_lemaker
-	layers: meta-bsp_lemaker
+	URI: git://git.openembedded.org/meta-openembedded
+	layers: meta-networking
+	branch: master
+	revision: a19aa29f7fa336cd075b72c496fe1102e6e5422b
+
+### Webkit `meta-webkit`
+
+Webkit wird von der `xmz-gui` benötigt.
+
+	URI: 
+	layers: 
 	branch: master
 	revision: HEAD
 
-### Rust Programiersprach `meta-rust-bin`
+### Recipes der 'xMZ-Plattform' `meta-xmz`
+
+	URI: 
+	layers: 
+	branch: master
+	revision: HEAD
+
+### Rust Programiersprache `meta-rust-bin`
 
 	URI: https://github.com/zzeroo/meta-rust-bin.git
 	layers: meta-rust-bin
