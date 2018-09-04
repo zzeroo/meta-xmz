@@ -12,7 +12,6 @@ Dieser Layer hängt von folgenden Layern ab:
 ### Board Support Package (BSP) für Lemaker Geräte `meta-bsp_lemaker`
 
 	URI: https://github.com/zzeroo/meta-bsp_lemaker
-	layers: meta-bsp_lemaker
 	branch: master
 	revision: ba693ccefbbbce99cff07894aa6672c9695ad448
 
@@ -27,7 +26,6 @@ angegeben, z.B. `/home/build/meta-openembedded/meta-oe` oder
 #### OpenEmbedded `meta-oe`
 
 	URI: git://git.openembedded.org/meta-openembedded
-	layers: meta-oe
 	branch: master
 	revision: a19aa29f7fa336cd075b72c496fe1102e6e5422b
 
@@ -50,21 +48,18 @@ angegeben, z.B. `/home/build/meta-openembedded/meta-oe` oder
 
 Webkit wird von der `xmz-gui` benötigt.
 
-	URI: 
-	layers: 
+	URI: https://github.com/Igalia/meta-webkit.git
 	branch: master
-	revision: HEAD
+	revision: 6413711dd065b0a0476930c8174d8d769963bc91
 
 ### Recipes der 'xMZ-Plattform' `meta-xmz`
 
-	URI: 
-	layers: 
+	URI: https://github.com/zzeroo/meta-xmz
 	branch: master
 	revision: HEAD
 
 ### Rust Programiersprache `meta-rust-bin`
 
-	URI: https://github.com/zzeroo/meta-rust-bin.git
-	layers: meta-rust-bin
-	branch: nightly
-	revision: HEAD
+	URI: https://github.com/rust-embedded/meta-rust-bin
+	branch: master
+	revision: 4108da49c2de8dc79339900ad36e6182c1e93012
