@@ -3,38 +3,39 @@ require recipes-extended/images/core-image-full-cmdline.bb
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.GPLv2;md5=751419260aa954499f7abaabaa882bbe"
 
-PR = "r2"
+PR = "r5"
 
 # Auto resize root filesystem on first boot
 IMAGE_INSTALL += " \
     e2fsprogs-resize2fs \
     resize-rootfs \
 "
-
-# Include modules in rootfs
+# Include linux kernel modules in rootfs
+IMAGE_INSTALL += "kernel-modules"
+# Include linux kernel headers in rootfs
+IMAGE_INSTALL += "kernel-devsrc"
+# include wayland/ weston
 IMAGE_INSTALL += " \
-	kernel-modules \
   wayland \
 	weston \
 	weston-init \
 	weston-config \
 	weston-disable-mousepointer \
 "
-
+# include gtk3 and dependend tools
 IMAGE_INSTALL += " \
 	gtk+3 \
 	adwaita-icon-theme \
 "
-
+# german localisation
 IMAGE_INSTALL += " \
 	locale-base-de-de \
 	coreutils-locale-de \
 "
-
+# include default CA certificate
 IMAGE_INSTALL += " \
   ca-certificates \
 "
-
 # ENDE IMAGE BASE
 
 

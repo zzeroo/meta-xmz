@@ -15,6 +15,8 @@ DEPENDS += " \
   webkitgtk \
 "
 
+IMAGE_FEATURES += "x11"
+
 # RDEPENDS_${PN} = " \
 #   gnome-themes \
 #   faenza-icon-theme \
